@@ -16,14 +16,18 @@ const test = async (req, res) => {
 
 const fetchUsers = async (req, res) => {
     console.log('------ INSIDE PROFILE ROUTE -------');
-    console.log(req.body);
     const allUsers = await User.find({});
+    // protected data 
+    // res.json({
+    //     id: req.user.id,
+    //     name: req.user.name,
+    //     email: req.user.email,
+    //     users: allUsers
+    // });
+
     res.json({
-        id: req.user.id,
-        name: req.user.name,
-        email: req.user.email,
         users: allUsers
-    });
+    })
 }
 
 router.get('/test', test);
