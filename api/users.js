@@ -14,6 +14,7 @@ const test = async (req, res) => {
     res.json({ message: 'User endpoint OK!'});
 }
 
+// routes
 router.get('/test', test);
 
 // POST api/users/register (Public)
