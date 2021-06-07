@@ -25,9 +25,7 @@ const fetchUsers = async (req, res) => {
     //     users: allUsers
     // });
 
-    res.json({
-        users: allUsers
-    })
+    res.json({ users: allUsers });
 }
 
 router.get('/test', test);
