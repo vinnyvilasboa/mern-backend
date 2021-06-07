@@ -1,10 +1,11 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-
+//=======================DB============================//
 mongoose.connect(process.env.MONGO_URI, {
     userNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true
+    useFindAndModify: true,
+    useCreateIndex: true
 });
 
 const db = mongoose.connection;
