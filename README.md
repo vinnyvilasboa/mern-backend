@@ -1,4 +1,5 @@
-# mern-auth-backend
+# MERN Authentication `Backend`
+
 This is a code along for MERN Auth
 
 Notes:
@@ -14,10 +15,6 @@ Notes:
 8. Make route for each controller
 9. Test other controllers in the box
 10. Make template, add models and routes
-
-# MERN Authentication `Backend`
-
-Express authentication template using MongoDB for the database, Passport + Flash messages + custom middleware
 
 ## What it includes
 
