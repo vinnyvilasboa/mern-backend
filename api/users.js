@@ -8,7 +8,7 @@ const passport = require('passport');
 const JWT_SECRET = process.env.JWT_SECRET;
 
 // Models
-
+const { User }= require('../models')
 // controllers
 const test = async (req, res) => {
     res.json({ message: 'User endpoint OK!'});
@@ -24,7 +24,7 @@ router.get('/test', test);
 // router.post('/login', login);
 
 // GET api/users/current (Private)
-router.get('/profile', passport.authenticate('jwt', { session: false }), profile);
+// router.get('/profile', passport.authenticate('jwt', { session: false }), profile);
 // router.get('/all-users', fetchUsers);
 
 module.exports = router; 
