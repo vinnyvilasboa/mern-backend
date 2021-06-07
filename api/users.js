@@ -16,7 +16,6 @@ const test = async (req, res) => {
 
 const fetchUsers = async (req, res) => {
     console.log('------ INSIDE PROFILE ROUTE -------');
-    console.log(req)
     console.log(req.body);
     const allUsers = await User.find({});
     res.json({
@@ -30,13 +29,13 @@ const fetchUsers = async (req, res) => {
 router.get('/test', test);
 
 // POST api/users/register (Public)
-router.post('/signup', signup);
+// router.post('/signup', signup);
 
 // POST api/users/login (Public)
-router.post('/login', login)
+// router.post('/login', login);
 
 // GET api/users/current (Private)
 router.get('/profile', passport.authenticate('jwt', { session: false }), profile);
-router.get('/all-users', passport.authenticate('jwt', { session: false }), fetchUsers);
+router.get('/all-users', fetchUsers);
 
 module.exports = router; 
